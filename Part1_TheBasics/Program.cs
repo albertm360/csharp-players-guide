@@ -10,6 +10,11 @@ while (true)
     Console.WriteLine("1. Level 3: Hello, World!");
     Console.WriteLine("2. Level 3: What Comes Next");
     Console.WriteLine("3. Level 3: The Makings of a Programmer");
+    Console.WriteLine("4. Level 3: Consolas and Telim");
+    Console.WriteLine("5. Level 4: The Thing Namer 3000");
+    Console.WriteLine("6. Level 6: The Variable Shop");
+    Console.WriteLine("7. Level 6: The Variable Shop Returns");
+    Console.WriteLine("8. Level 7: The Triangle Farmer");
     
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -35,6 +40,26 @@ while (true)
             case "3":
                 Console.ResetColor();
                 Level03_MakingsProgrammer.Run();
+                break;
+            case "4":
+                Console.ResetColor();
+                Level03_ConsolasAndTelim.Run();
+                break;
+            case "5":
+                Console.ResetColor();
+                Level04_TheThingNamer3000.Run();
+                break;
+            case "6":
+                Console.ResetColor();
+                Level06_TheVariableShop.Run();
+                break;
+            case "7":
+                Console.ResetColor();
+                Level06_VariableShopReturns.Run();
+                break;
+            case "8":
+                Console.ResetColor();
+                Level07_TheTriangleFarmer.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
