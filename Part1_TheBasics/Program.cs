@@ -7,14 +7,16 @@ while (true)
     Console.WriteLine("\nSelect an exercise to run (or type 'exit' to quit):");
     
     Console.ForegroundColor = ConsoleColor.Yellow;
-    Console.WriteLine("1. Level 3: Hello, World!");
-    Console.WriteLine("2. Level 3: What Comes Next");
-    Console.WriteLine("3. Level 3: The Makings of a Programmer");
-    Console.WriteLine("4. Level 3: Consolas and Telim");
-    Console.WriteLine("5. Level 4: The Thing Namer 3000");
-    Console.WriteLine("6. Level 6: The Variable Shop");
-    Console.WriteLine("7. Level 6: The Variable Shop Returns");
-    Console.WriteLine("8. Level 7: The Triangle Farmer");
+    Console.WriteLine("01. Level 3: Hello, World!");
+    Console.WriteLine("02. Level 3: What Comes Next");
+    Console.WriteLine("03. Level 3: The Makings of a Programmer");
+    Console.WriteLine("04. Level 3: Consolas and Telim");
+    Console.WriteLine("05. Level 4: The Thing Namer 3000");
+    Console.WriteLine("06. Level 6: The Variable Shop");
+    Console.WriteLine("07. Level 6: The Variable Shop Returns");
+    Console.WriteLine("08. Level 7: The Triangle Farmer");
+    Console.WriteLine("09. Level 7: The Four Sisters and the Duckbear");
+    Console.WriteLine("10. Level 7: The Dominion Of Kings");
     
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -60,6 +62,14 @@ while (true)
             case "8":
                 Console.ResetColor();
                 Level07_TheTriangleFarmer.Run();
+                break;
+            case "9":
+                Console.ResetColor();
+                Level07_FourSistersAndDuckbear.Run();
+                break;
+            case "10":
+                Console.ResetColor();
+                Level07_TheDominionOfKings.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
