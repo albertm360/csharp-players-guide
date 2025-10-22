@@ -18,6 +18,7 @@ while (true)
     Console.WriteLine("09. Level 7: The Four Sisters and the Duckbear");
     Console.WriteLine("10. Level 7: The Dominion Of Kings");
     Console.WriteLine("11. Level 8: The Defense of Consolas");
+    Console.WriteLine("12. Level 9: Repairing the Clocktower");
     
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -75,6 +76,10 @@ while (true)
             case "11":
                 Console.ResetColor();
                 Level08_DefenseOfConsolas.Run();
+                break;
+            case "12":
+                Console.ResetColor();
+                Level09_RepairingTheClocktower.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
