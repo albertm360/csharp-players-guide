@@ -17,6 +17,7 @@ while (true)
     Console.WriteLine("08. Level 7: The Triangle Farmer");
     Console.WriteLine("09. Level 7: The Four Sisters and the Duckbear");
     Console.WriteLine("10. Level 7: The Dominion Of Kings");
+    Console.WriteLine("11. Level 8: The Defense of Consolas");
     
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -70,6 +71,10 @@ while (true)
             case "10":
                 Console.ResetColor();
                 Level07_TheDominionOfKings.Run();
+                break;
+            case "11":
+                Console.ResetColor();
+                Level08_DefenseOfConsolas.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
