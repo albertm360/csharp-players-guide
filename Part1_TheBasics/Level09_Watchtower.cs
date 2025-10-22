@@ -46,13 +46,11 @@ public class Level09_Watchtower
     
     public static void Run()
     {
-        int xPos;
-        int yPos;
         string xPosPrompt = "Introduce the 'x' coordinate: ";
         string yPosPrompt = "Introduce the 'y' coordinate: ";
         
-        xPos = GetPosition(xPosPrompt);
-        yPos = GetPosition(yPosPrompt);
+        int xPos = GetPosition(xPosPrompt);
+        int yPos = GetPosition(yPosPrompt);
 
         Console.WriteLine(Enemy(x: xPos, y: yPos));
     }

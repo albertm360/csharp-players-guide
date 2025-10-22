@@ -7,19 +7,20 @@ while (true)
     Console.WriteLine("\nSelect an exercise to run (or type 'exit' to quit):");
     
     Console.ForegroundColor = ConsoleColor.Yellow;
-    Console.WriteLine("01. Level 3: Hello, World!");
-    Console.WriteLine("02. Level 3: What Comes Next");
-    Console.WriteLine("03. Level 3: The Makings of a Programmer");
-    Console.WriteLine("04. Level 3: Consolas and Telim");
-    Console.WriteLine("05. Level 4: The Thing Namer 3000");
-    Console.WriteLine("06. Level 6: The Variable Shop");
-    Console.WriteLine("07. Level 6: The Variable Shop Returns");
-    Console.WriteLine("08. Level 7: The Triangle Farmer");
-    Console.WriteLine("09. Level 7: The Four Sisters and the Duckbear");
-    Console.WriteLine("10. Level 7: The Dominion Of Kings");
-    Console.WriteLine("11. Level 8: The Defense of Consolas");
-    Console.WriteLine("12. Level 9: Repairing the Clocktower");
-    Console.WriteLine("13. Level 9: Watchtower");
+    Console.WriteLine("01. Level 03: Hello, World!");
+    Console.WriteLine("02. Level 03: What Comes Next");
+    Console.WriteLine("03. Level 03: The Makings of a Programmer");
+    Console.WriteLine("04. Level 03: Consolas and Telim");
+    Console.WriteLine("05. Level 04: The Thing Namer 3000");
+    Console.WriteLine("06. Level 06: The Variable Shop");
+    Console.WriteLine("07. Level 06: The Variable Shop Returns");
+    Console.WriteLine("08. Level 07: The Triangle Farmer");
+    Console.WriteLine("09. Level 07: The Four Sisters and the Duckbear");
+    Console.WriteLine("10. Level 07: The Dominion Of Kings");
+    Console.WriteLine("11. Level 08: The Defense of Consolas");
+    Console.WriteLine("12. Level 09: Repairing the Clocktower");
+    Console.WriteLine("13. Level 09: Watchtower");
+    Console.WriteLine("14. Level 10: Buying Inventory");
     
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -85,6 +86,10 @@ while (true)
             case "13":
                 Console.ResetColor();
                 Level09_Watchtower.Run();
+                break;
+            case "14":
+                Console.ResetColor();
+                Level10_BuyingInventory.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
