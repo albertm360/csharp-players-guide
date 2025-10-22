@@ -32,6 +32,7 @@ public class Level08_DefenseOfConsolas
     
     public static void Run()
     {
+        Console.Title = "Defense of Consolas";
         const string targetRowString = "What is the target row of the magic barrier? ";
         const string targetColumnString = "What is the target column of the magic barrier? ";
         
