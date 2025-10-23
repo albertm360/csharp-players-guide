@@ -72,6 +72,7 @@ public class Level10_DiscountedInventory
 
         } while (true);
     }
+    
     public static void Run()
     {
         items.Add(rope);
