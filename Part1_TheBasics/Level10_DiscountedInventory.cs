@@ -13,6 +13,7 @@ public class Item
         Price = price;
     }
 }
+
 public class Level10_DiscountedInventory
 {
     private const string member = "albert";
@@ -45,6 +46,7 @@ public class Level10_DiscountedInventory
             }
         } while (true);
     }
+    
     static Item GetSelection()
     {
         do
@@ -72,6 +74,7 @@ public class Level10_DiscountedInventory
 
         } while (true);
     }
+    
     public static void Run()
     {
         items.Add(rope);
