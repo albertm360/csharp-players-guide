@@ -22,6 +22,8 @@ while (true)
     Console.WriteLine("13. Level 09: Watchtower");
     Console.WriteLine("14. Level 10: Buying Inventory");
     Console.WriteLine("15. Level 10: Discounted Inventory");
+    Console.WriteLine("16. Level 11: The Prototype");
+    Console.WriteLine("17. Level 11: The Magic Cannon");
     
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -95,6 +97,14 @@ while (true)
             case "15":
                 Console.ResetColor();
                 Level10_DiscountedInventory.Run();
+                break;
+            case "16":
+                Console.ResetColor();
+                Level11_ThePrototype.Run();
+                break;
+            case "17":
+                Console.ResetColor();
+                Level11_TheMagicCannon.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
