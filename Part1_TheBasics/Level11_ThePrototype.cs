@@ -17,6 +17,7 @@ public class Level11_ThePrototype
             Console.WriteLine("Invalid number. Please try again.");
         } while (true);
     }
+
     public static void Run()
     {
         int pilotNumber;
@@ -28,9 +29,9 @@ public class Level11_ThePrototype
 
         Console.WriteLine(pilotPrompt);
         pilotNumber = ValidateNumber();
-        
+
         Console.Clear();
-        
+
         while (!hunterGuessed)
         {
             Console.WriteLine(hunterPrompt);
@@ -40,10 +41,12 @@ public class Level11_ThePrototype
             {
                 hunterGuessed = true;
                 Console.WriteLine("You guessed the number!");
-            } else if (pilotNumber > hunterGuess)
+            }
+            else if (pilotNumber > hunterGuess)
             {
                 Console.WriteLine($"{hunterGuess} is too low.");
-            } else if (pilotNumber < hunterGuess)
+            }
+            else if (pilotNumber < hunterGuess)
             {
                 Console.WriteLine($"{hunterGuess} is too high.");
             }
