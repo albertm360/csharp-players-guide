@@ -4,30 +4,21 @@ public class Level11_TheMagicCannon
 {
     static string BlastType(int turn)
     {
-        string normal = "Normal";
-        string special = "Special";
-        string fire = "Fire";
-        string electric = "Electric";
+        const string normal = "Normal";
+        const string special = "Special";
+        const string fire = "Fire";
+        const string electric = "Electric";
 
-        if (turn % 5 == 0 && turn % 3 == 0)
-        {
-            return special;
-        } 
-        
-        if (turn % 3 == 0)
-        {
-            return fire;
-        }
-        
-        if (turn % 5 == 0)
-        {
-            return electric;
-        } 
-        
+        if (turn % 5 == 0 && turn % 3 == 0) return special;
+
+        if (turn % 3 == 0) return fire;
+
+        if (turn % 5 == 0) return electric;
+
         return normal;
     }
-    
-    static void SetConsoleForegroundColor (string blastType)
+
+    static void SetConsoleForegroundColor(string blastType)
     {
         switch (blastType)
         {
@@ -45,7 +36,7 @@ public class Level11_TheMagicCannon
                 break;
         }
     }
-    
+
     public static void Run()
     {
         int turn = 1;
