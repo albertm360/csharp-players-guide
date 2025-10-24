@@ -5,7 +5,7 @@ while (true)
     Console.Clear();
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("\nSelect an exercise to run (or type 'exit' to quit):");
-    
+
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine("01. Level 03: Hello, World!");
     Console.WriteLine("02. Level 03: What Comes Next");
@@ -24,7 +24,9 @@ while (true)
     Console.WriteLine("15. Level 10: Discounted Inventory");
     Console.WriteLine("16. Level 11: The Prototype");
     Console.WriteLine("17. Level 11: The Magic Cannon");
-    
+    Console.WriteLine("18. Level 12: The Replicator of D'To");
+    Console.WriteLine("19. Level 12: The Laws of Freach");
+
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
     string? choice = Console.ReadLine();
@@ -106,6 +108,14 @@ while (true)
                 Console.ResetColor();
                 Level11_TheMagicCannon.Run();
                 break;
+            case "18":
+                Console.ResetColor();
+                Level12_ReplicatorOfDTo.Run();
+                break;
+            case "19":
+                Console.ResetColor();
+                Level12_LawsOfFreach.Run();
+                break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Invalid selection. Please try again.");
@@ -119,7 +129,7 @@ while (true)
         Console.WriteLine($"An error occurred: {ex.Message}");
         Console.ResetColor();
     }
-    
+
     Console.WriteLine("\nPress any key to return to the menu...");
     Console.ReadKey();
 }
