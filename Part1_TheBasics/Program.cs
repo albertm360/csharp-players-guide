@@ -25,6 +25,7 @@ while (true)
     Console.WriteLine("16. Level 11: The Prototype");
     Console.WriteLine("17. Level 11: The Magic Cannon");
     Console.WriteLine("18. Level 12: The Replicator of D'To");
+    Console.WriteLine("19. Level 12: The Laws of Freach");
 
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -110,6 +111,10 @@ while (true)
             case "18":
                 Console.ResetColor();
                 Level12_ReplicatorOfDTo.Run();
+                break;
+            case "19":
+                Console.ResetColor();
+                Level12_LawsOfFreach.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
