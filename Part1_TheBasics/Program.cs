@@ -27,6 +27,7 @@ while (true)
     Console.WriteLine("18. Level 12: The Replicator of D'To");
     Console.WriteLine("19. Level 12: The Laws of Freach");
     Console.WriteLine("20. Level 13: Taking a Number");
+    Console.WriteLine("21. Level 13: Countdown");
 
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -120,6 +121,10 @@ while (true)
             case "20":
                 Console.ResetColor();
                 Level13_TakingANumber.Run();
+                break;
+            case "21":
+                Console.ResetColor();
+                Level13_Countdown.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
