@@ -28,6 +28,7 @@ while (true)
     Console.WriteLine("19. Level 12: The Laws of Freach");
     Console.WriteLine("20. Level 13: Taking a Number");
     Console.WriteLine("21. Level 13: Countdown");
+    Console.WriteLine("22. Level 14: Hunting the Manticore");
 
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -125,6 +126,10 @@ while (true)
             case "21":
                 Console.ResetColor();
                 Level13_Countdown.Run();
+                break;
+            case "22":
+                Console.ResetColor();
+                Level14_HuntingTheManticore.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
