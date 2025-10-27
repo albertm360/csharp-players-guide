@@ -8,6 +8,7 @@ while (true)
 
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine("01. Level 16: Simula's Test");
+    Console.WriteLine("02. Level 17: Simula's Soup");
 
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -25,6 +26,10 @@ while (true)
             case "1":
                 Console.ResetColor();
                 Level16SimulasTest.Run();
+                break;
+            case "2":
+                Console.ResetColor();
+                Level17SimulasSoup.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
