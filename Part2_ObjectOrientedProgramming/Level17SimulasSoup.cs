@@ -52,7 +52,7 @@ public class Level17SimulasSoup
 
         // It should be impossible to reach this, but it's a workaround for not 
         // having a default value to return:
-        throw new ArgumentOutOfRangeException(nameof(choice), "Unexpected food type choice.");
+        throw new ArgumentOutOfRangeException(nameof(choice), "Unexpected seasoning choice.");
     }
 
     static int PrintEnumValues<TEnum>() where TEnum : Enum
