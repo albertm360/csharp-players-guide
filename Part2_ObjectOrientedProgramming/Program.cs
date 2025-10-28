@@ -9,7 +9,7 @@ while (true)
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine("01. Level 16: Simula's Test");
     Console.WriteLine("02. Level 17: Simula's Soup");
-    Console.WriteLine("03. Level 18: Vin Fletcher's Arrows");
+    Console.WriteLine("03. Level 18/19: Vin Fletcher's Arrows / Vin's Trouble");
 
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");

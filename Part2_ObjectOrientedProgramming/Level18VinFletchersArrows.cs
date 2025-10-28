@@ -47,9 +47,9 @@ public class Utils
 
 public class Arrow
 {
-    Arrowhead _arrowhead;
-    Fletching _fletching;
-    int _shaft;
+    private Arrowhead _arrowhead;
+    private Fletching _fletching;
+    private int _shaft;
 
     public Arrow(Arrowhead arrowhead, Fletching fletching, int shaft)
     {
@@ -167,6 +167,12 @@ public class Level18VinFletchersArrows
 
     public static void Run()
     {
+        /*
+         * This file covers exercise "Vin Fletcher's Arrows" and "Vin's Trouble",
+         * since the objectives of the latter, besides making the fields private,
+         * were already included on lesson 18.
+         */
+
         const string ArrowheadPrompt = "Choose the arrowhead material: ";
         const string FletchingPrompt = "Choose the fletching material: ";
         const string ShaftPrompt = "Choose the length of the shaft: ";
@@ -184,7 +190,7 @@ public class Level18VinFletchersArrows
         int shaftLength = Utils.GetValidChoiceInRange(ShaftPrompt, ShaftMinLength, ShaftMaxLength);
 
         Arrow arrow = new Arrow(arrowhead, fletching, shaftLength);
-        double totalCost = arrow.GetCost();
+        float totalCost = arrow.GetCost();
         Console.WriteLine($"Your arrow costs {totalCost} gold.");
     }
 }
