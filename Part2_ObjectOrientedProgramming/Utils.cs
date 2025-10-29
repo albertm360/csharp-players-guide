@@ -37,8 +37,10 @@ public class Utils
     {
         do
         {
-            Console.WriteLine(prompt);
+            Console.Write(prompt);
+            Console.ForegroundColor = ConsoleColor.Yellow;
             string? input = Console.ReadLine();
+            Console.ResetColor();
 
             if (int.TryParse(input, out int number) && number >= min && number <= max) return number;
 
