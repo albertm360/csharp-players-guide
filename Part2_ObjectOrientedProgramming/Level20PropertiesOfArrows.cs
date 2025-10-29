@@ -1,6 +1,8 @@
-﻿namespace Part2_ObjectOrientedProgramming;
+﻿using System.Text;
 
-public class Level18VinFletchersArrows
+namespace Part2_ObjectOrientedProgramming;
+
+public class Level20PropertiesOfArrows
 {
     static Arrowhead SelectedArrowhead(int choice)
     {
@@ -34,11 +36,8 @@ public class Level18VinFletchersArrows
 
     public static void Run()
     {
-        /*
-         * This file covers exercise "Vin Fletcher's Arrows" and "Vin's Trouble",
-         * since the objectives of the latter, besides making the fields private,
-         * were already included on lesson 18.
-         */
+        // This exercise uses the ArrowP class, built with Properties instead of Fields
+        Console.OutputEncoding = Encoding.UTF8;
 
         const string ArrowheadPrompt = "Choose the arrowhead material: ";
         const string FletchingPrompt = "Choose the fletching material: ";
@@ -56,8 +55,13 @@ public class Level18VinFletchersArrows
 
         int shaftLength = Utils.GetValidChoiceInRange(ShaftPrompt, ShaftMinLength, ShaftMaxLength);
 
-        Arrow arrow = new Arrow(arrowhead, fletching, shaftLength);
+        ArrowP arrow = new ArrowP(arrowhead, fletching, shaftLength);
+
         float totalCost = arrow.GetCost();
-        Console.WriteLine($"Your arrow costs {totalCost} gold.");
+        Console.WriteLine($"Your arrow costs {totalCost} gold. 💰");
+
+        Console.WriteLine($"Arrowhead: {arrow.Arrowhead.ToString().ToLower()} - {arrow.GetArrowheadPrice()} gold.");
+        Console.WriteLine($"Fletching: {arrow.Fletching.ToString().ToLower()} - {arrow.GetFletchingPrice()} gold.");
+        Console.WriteLine($"Shaft: {arrow.ShaftLength.ToString()} cm - {arrow.GetShaftPrice()} gold.");
     }
 }

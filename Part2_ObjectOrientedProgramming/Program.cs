@@ -10,6 +10,7 @@ while (true)
     Console.WriteLine("01. Level 16: Simula's Test");
     Console.WriteLine("02. Level 17: Simula's Soup");
     Console.WriteLine("03. Level 18/19: Vin Fletcher's Arrows / Vin's Trouble");
+    Console.WriteLine("04. Level 20: The Properties of Arrows");
 
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -35,6 +36,10 @@ while (true)
             case "3":
                 Console.ResetColor();
                 Level18VinFletchersArrows.Run();
+                break;
+            case "4":
+                Console.ResetColor();
+                Level20PropertiesOfArrows.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
