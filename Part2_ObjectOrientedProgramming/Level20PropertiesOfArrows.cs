@@ -73,7 +73,7 @@ public class Level20PropertiesOfArrows
         const string ShaftPrompt = "Choose the length of the shaft: ";
         const int ShaftMinLength = 60;
         const int ShaftMaxLength = 100;
-        ArrowP? arrow;
+        ArrowP arrow;
 
         int factorySelection = Utils.GetValidChoice(FactoryPrompt, 2);
         if (factorySelection == 1)
