@@ -19,6 +19,21 @@ public class ArrowP
         ShaftLength = shaftLength;
     }
 
+    public static ArrowP CreateEliteArrow()
+    {
+        return new ArrowP(Arrowhead.Steel, Fletching.Plastic, shaftLength: 95);
+    }
+
+    public static ArrowP CreateBeginnerArrow()
+    {
+        return new ArrowP(Arrowhead.Wood, Fletching.GooseFeathers, shaftLength: 75);
+    }
+
+    public static ArrowP CreateMarksmanArrow()
+    {
+        return new ArrowP(Arrowhead.Steel, Fletching.GooseFeathers, shaftLength: 65);
+    }
+
     public int GetArrowheadPrice()
     {
         switch (Arrowhead)
