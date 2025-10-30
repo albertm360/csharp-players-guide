@@ -1,4 +1,6 @@
-﻿namespace Part2_ObjectOrientedProgramming;
+﻿using Part2_ObjectOrientedProgramming.Models;
+
+namespace Part2_ObjectOrientedProgramming.Exercises;
 
 public class Level24TheColor
 {

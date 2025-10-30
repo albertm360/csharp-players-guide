@@ -1,6 +1,6 @@
-﻿namespace Part2_ObjectOrientedProgramming;
+﻿namespace Part2_ObjectOrientedProgramming.Models;
 
-public class Utils
+public static class Utils
 {
     public static int PrintEnumValues<TEnum>() where TEnum : Enum
     {

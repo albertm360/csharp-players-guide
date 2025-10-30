@@ -1,4 +1,5 @@
 ﻿using Part2_ObjectOrientedProgramming;
+using Part2_ObjectOrientedProgramming.Exercises;
 
 while (true)
 {
