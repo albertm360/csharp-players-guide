@@ -1,4 +1,6 @@
-﻿namespace Part2_ObjectOrientedProgramming;
+﻿using Part2_ObjectOrientedProgramming.Models.Enums;
+
+namespace Part2_ObjectOrientedProgramming.Models;
 
 public class Arrow
 {

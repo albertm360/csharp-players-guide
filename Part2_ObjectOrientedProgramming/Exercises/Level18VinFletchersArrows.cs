@@ -1,4 +1,7 @@
-﻿namespace Part2_ObjectOrientedProgramming;
+﻿using Part2_ObjectOrientedProgramming.Models;
+using Part2_ObjectOrientedProgramming.Models.Enums;
+
+namespace Part2_ObjectOrientedProgramming.Exercises;
 
 public class Level18VinFletchersArrows
 {
