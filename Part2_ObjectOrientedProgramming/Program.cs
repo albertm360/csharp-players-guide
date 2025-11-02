@@ -13,6 +13,7 @@ while (true)
     Console.WriteLine("04. Level 20/21: The Properties of Arrows / Arrow Factories");
     Console.WriteLine("05. Level 24: The Point");
     Console.WriteLine("06. Level 24: The Color");
+    Console.WriteLine("07. Level 24: The Card");
 
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -50,6 +51,10 @@ while (true)
             case "6":
                 Console.ResetColor();
                 Level24TheColor.Run();
+                break;
+            case "7":
+                Console.ResetColor();
+                Level24TheCard.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
