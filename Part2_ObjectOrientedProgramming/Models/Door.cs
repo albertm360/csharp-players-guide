@@ -5,17 +5,17 @@ namespace Part2_ObjectOrientedProgramming.Models;
 public class Door
 {
     /*
-     *  - An open door can always be closed
-     *  - A closed (but not locked door) can always be opened
-     *  - A closed door can always be locked
+     *  - An open door can always be closed ✅
+     *  - A closed (but not locked door) can always be opened ✅
+     *  - A closed door can always be locked ✅
      *  - A locked door can be unlocked, but a numeric passcode is needed, and the door will
-     *  only unlock if the code supplied matches the door's current passcode
-     *  - When a door is created, it must be given an initial passcode
+     *  only unlock if the code supplied matches the door's current passcode ✅
+     *  - When a door is created, it must be given an initial passcode ✅
      *  - Additionally, you should be able to change the passcode by supplying the current code and a new one.
-     *  The passcode should only change if the correct, current code is given.
+     *  The passcode should only change if the correct, current code is given. ✅
      */
 
-    public DoorState DoorState { get; set; }
+    public DoorState DoorState { get; private set; }
     private int Passcode { get; set; }
 
     public Door(int passcode)
@@ -29,16 +29,15 @@ public class Door
         Passcode = passcode;
     }
 
-    public void UnlockDoor(int guess)
+    public bool UnlockDoor(int guess)
     {
         if (guess == Passcode)
         {
-            DoorState = DoorState.Unlocked;
+            DoorState = DoorState.Closed;
+            return true;
         }
-        else
-        {
-            throw new ApplicationException("Invalid passcode.");
-        }
+
+        return false;
     }
 
     public void LockDoor()
@@ -56,15 +55,16 @@ public class Door
         DoorState = DoorState.Open;
     }
 
-    public void ChangePasscode(int currentPassword, int newPasscode)
+    public bool ChangePasscode(int currentPassword, int newPasscode)
     {
         if (currentPassword == Passcode)
         {
             Passcode = newPasscode;
+            return true;
         }
         else
         {
-            throw new ApplicationException("Invalid passcode.");
+            return false;
         }
     }
 }

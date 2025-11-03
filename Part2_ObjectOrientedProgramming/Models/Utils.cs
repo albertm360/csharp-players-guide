@@ -47,4 +47,22 @@ public static class Utils
             Console.WriteLine($"Wrong input, enter a number between {min} and {max}...");
         } while (true);
     }
+
+    public static string GetValidString(string prompt)
+    {
+        do
+        {
+            Console.Write(prompt);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            string? input = Console.ReadLine();
+            Console.ResetColor();
+
+            if (!String.IsNullOrWhiteSpace(input))
+            {
+                return input;
+            }
+
+            Console.WriteLine("Wrong input, please enter some text: ");
+        } while (true);
+    }
 }
