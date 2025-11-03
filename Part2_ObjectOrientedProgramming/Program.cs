@@ -1,7 +1,10 @@
-﻿using Part2_ObjectOrientedProgramming.Exercises;
+﻿using System.Text;
+using Part2_ObjectOrientedProgramming.Exercises;
 
 while (true)
 {
+    Console.OutputEncoding = Encoding.UTF8;
+    Console.Title = "Object Oriented Programming";
     Console.Clear();
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("\nSelect an exercise to run (or type 'exit' to quit):");
@@ -14,6 +17,7 @@ while (true)
     Console.WriteLine("05. Level 24: The Point");
     Console.WriteLine("06. Level 24: The Color");
     Console.WriteLine("07. Level 24: The Card");
+    Console.WriteLine("08. Level 24: The Locked Door");
 
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -55,6 +59,11 @@ while (true)
             case "7":
                 Console.ResetColor();
                 Level24TheCard.Run();
+                break;
+            case "8":
+                Console.ResetColor();
+                Level24TheLockedDoor exercise = new Level24TheLockedDoor();
+                exercise.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
