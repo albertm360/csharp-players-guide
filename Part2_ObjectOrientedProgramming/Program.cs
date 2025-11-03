@@ -14,6 +14,7 @@ while (true)
     Console.WriteLine("05. Level 24: The Point");
     Console.WriteLine("06. Level 24: The Color");
     Console.WriteLine("07. Level 24: The Card");
+    Console.WriteLine("08. Level 24: The Locked Door");
 
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -55,6 +56,10 @@ while (true)
             case "7":
                 Console.ResetColor();
                 Level24TheCard.Run();
+                break;
+            case "8":
+                Console.ResetColor();
+                Level24TheLockedDoor.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
