@@ -1,5 +1,4 @@
-﻿using System.Text;
-using Part2_ObjectOrientedProgramming.Models;
+﻿using Part2_ObjectOrientedProgramming.Models;
 using Part2_ObjectOrientedProgramming.Models.Enums;
 
 namespace Part2_ObjectOrientedProgramming.Exercises;
