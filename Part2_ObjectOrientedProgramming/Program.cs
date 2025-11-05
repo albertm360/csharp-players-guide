@@ -18,6 +18,7 @@ while (true)
     Console.WriteLine("06. Level 24: The Color");
     Console.WriteLine("07. Level 24: The Card");
     Console.WriteLine("08. Level 24: The Locked Door");
+    Console.WriteLine("09. Level 24: The Password Validator");
 
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -64,6 +65,11 @@ while (true)
                 Console.ResetColor();
                 Level24TheLockedDoor exercise = new Level24TheLockedDoor();
                 exercise.Run();
+                break;
+            case "9":
+                Console.ResetColor();
+                Level24ThePasswordValidator pwdValidator = new Level24ThePasswordValidator();
+                pwdValidator.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
