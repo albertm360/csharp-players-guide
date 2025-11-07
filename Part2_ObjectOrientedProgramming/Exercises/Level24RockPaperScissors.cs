@@ -49,7 +49,7 @@ public class Level24RockPaperScissors
             1 => HandGesture.Rock,
             2 => HandGesture.Paper,
             3 => HandGesture.Scissors,
-            _ => throw new ArgumentOutOfRangeException()
+            _ => throw new ArgumentOutOfRangeException(nameof(choice), choice, "Invalid choice value")
         };
     }
 
