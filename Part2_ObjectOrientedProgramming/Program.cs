@@ -20,6 +20,7 @@ while (true)
     Console.WriteLine("08. Level 24: The Locked Door");
     Console.WriteLine("09. Level 24: The Password Validator");
     Console.WriteLine("10. Level 24: Rock-Paper-Scissors");
+    Console.WriteLine("11. Level 24: 15-Puzzle");
 
     Console.ForegroundColor = ConsoleColor.White;
     Console.Write("\nEnter your choice: ");
@@ -76,6 +77,11 @@ while (true)
                 Console.ResetColor();
                 Level24RockPaperScissors rps = new Level24RockPaperScissors();
                 rps.Run();
+                break;
+            case "11":
+                Console.ResetColor();
+                Level24FifteenPuzzle puzzle = new Level24FifteenPuzzle();
+                puzzle.Run();
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
