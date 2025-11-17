@@ -77,10 +77,10 @@ public class GameBoard
         int targetCol = _emptyTileCol;
 
         // Determine the target position based on the direction
-        if (direction == Direction.Up) targetRow++;
-        if (direction == Direction.Down) targetRow--;
-        if (direction == Direction.Left) targetCol++;
-        if (direction == Direction.Right) targetCol--;
+        if (direction == Direction.Up) targetRow--;
+        if (direction == Direction.Down) targetRow++;
+        if (direction == Direction.Left) targetCol--;
+        if (direction == Direction.Right) targetCol++;
 
         // Check if the target position is within bounds
         if (targetRow < 0 || targetRow > 3 || targetCol < 0 || targetCol > 3)
