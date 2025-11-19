@@ -2,15 +2,27 @@
 
 namespace Part2_ObjectOrientedProgramming.Models;
 
+/// <summary>
+/// Represents the grid of tiles for the 15-Puzzle game.
+/// Handles tile movement, randomization (shuffling), and checking for the solved state.
+/// </summary>
 public class GameBoard
 {
     private readonly int[,] _tiles;
     private int _emptyTileRow;
     private int _emptyTileCol;
+
+    /// <summary>
+    /// The size of the board (width and height). A value of 4 creates a 4x4 grid (15-Puzzle).
+    /// </summary>
     public const int BoardSize = 4;
 
     private readonly Random _random = new Random();
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="GameBoard"/> class.
+    /// The board is created in a solved state with tiles numbered sequentially and the empty space at the bottom-right.
+    /// </summary>
     public GameBoard()
     {
         // Initialize a solved 15-puzzle board
@@ -36,7 +48,8 @@ public class GameBoard
     }
 
     /// <summary>
-    /// Method <c>Shuffle</c> shuffles the board with valid movements.
+    /// Randomizes the board by performing a series of valid random moves.
+    /// This ensures the resulting puzzle state is always solvable.
     /// </summary>
     public void Shuffle()
     {
@@ -70,8 +83,11 @@ public class GameBoard
     }
 
     /// <summary>
-    /// Method <c>TryMove</c> attempts to move the empty tile in the specified direction.
+    /// Attempts to move the empty tile in the specified direction.
+    /// If the move would go out of bounds, it is ignored.
     /// </summary>
+    /// <param name="direction">The direction to move the empty tile (Up, Down, Left, Right).</param>
+    /// <returns><c>true</c> if the move was valid and performed; otherwise, <c>false</c>.</returns>
     public bool TryMove(Direction direction)
     {
         // Get the actual position of the empty tile
@@ -102,8 +118,9 @@ public class GameBoard
     }
 
     /// <summary>
-    /// Method <c>IsSolved</c> checks if the puzzle is solved.
+    /// Checks if the puzzle is currently in the solved state.
     /// </summary>
+    /// <returns><c>true</c> if all tiles are in order with the empty space last; otherwise, <c>false</c>.</returns>
     public bool IsSolved()
     {
         int expectedNumber = 1;
@@ -131,8 +148,21 @@ public class GameBoard
         return true;
     }
 
+    /// <summary>
+    /// Retrieves the numeric value of the tile at the specified grid coordinates.
+    /// </summary>
+    /// <param name="row">The row index of the tile.</param>
+    /// <param name="col">The column index of the tile.</param>
+    /// <returns>The number displayed on the tile at that location.</returns>
+    /// <exception cref="ArgumentOutOfRangeException">Thrown when the row or column is outside the board's bounds.</exception>
     public int GetTile(int row, int col)
     {
+        if (row < 0 || row >= BoardSize)
+            throw new ArgumentOutOfRangeException(nameof(row),
+                $"Row index {row} is out of bounds. Must be between 0 and {BoardSize - 1}.");
+        if (col < 0 || col >= BoardSize)
+            throw new ArgumentOutOfRangeException(nameof(col),
+                $"Column index {col} is out of bounds. Must be between 0 and {BoardSize - 1}.");
         return _tiles[row, col];
     }
 }
