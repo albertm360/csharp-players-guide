@@ -1,4 +1,6 @@
-﻿namespace Part2_ObjectOrientedProgramming.Models;
+﻿using Part2_ObjectOrientedProgramming.Models.Enums;
+
+namespace Part2_ObjectOrientedProgramming.Models;
 
 public static class Utils
 {
@@ -63,6 +65,37 @@ public static class Utils
             }
 
             Console.WriteLine("Wrong input, please enter some text: ");
+        } while (true);
+    }
+
+    public static Direction? GetValidDirection(string prompt)
+    {
+        Console.Write(prompt);
+        do
+        {
+            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+
+            switch (keyInfo.Key)
+            {
+                case ConsoleKey.UpArrow:
+                    return Direction.Up;
+                case ConsoleKey.DownArrow:
+                    return Direction.Down;
+                case ConsoleKey.LeftArrow:
+                    return Direction.Left;
+                case ConsoleKey.RightArrow:
+                    return Direction.Right;
+                case ConsoleKey.W:
+                    return Direction.Up;
+                case ConsoleKey.S:
+                    return Direction.Down;
+                case ConsoleKey.A:
+                    return Direction.Left;
+                case ConsoleKey.D:
+                    return Direction.Right;
+                case ConsoleKey.Q:
+                    return null;
+            }
         } while (true);
     }
 }

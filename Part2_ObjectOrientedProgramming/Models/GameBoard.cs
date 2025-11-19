@@ -4,23 +4,24 @@ namespace Part2_ObjectOrientedProgramming.Models;
 
 public class GameBoard
 {
-    private int[,] _tiles;
+    private readonly int[,] _tiles;
     private int _emptyTileRow;
     private int _emptyTileCol;
+    public const int BoardSize = 4;
 
-    private Random _random = new Random();
+    private readonly Random _random = new Random();
 
     public GameBoard()
     {
         // Initialize a solved 15-puzzle board
-        _tiles = new int[4, 4];
+        _tiles = new int[BoardSize, BoardSize];
         int number = 1;
 
-        for (int row = 0; row < 4; row++)
+        for (int row = 0; row < BoardSize; row++)
         {
-            for (int col = 0; col < 4; col++)
+            for (int col = 0; col < BoardSize; col++)
             {
-                if (row == 3 && col == 3)
+                if (row == BoardSize - 1 && col == BoardSize - 1)
                 {
                     _tiles[row, col] = 0; // Empty tile
                     _emptyTileRow = row;
@@ -39,7 +40,8 @@ public class GameBoard
     /// </summary>
     public void Shuffle()
     {
-        for (int i = 0; i < 100; i++)
+        const int shuffleMoves = 100;
+        for (int i = 0; i < shuffleMoves; i++)
         {
             // Pick a random direction: 0=Up, 1=Down, 2=Left, 3=Right
             int randomDirection = _random.Next(4);
@@ -54,7 +56,7 @@ public class GameBoard
             else if (randomDirection == 3) newCol++; // Right
 
             // Check if the new position is inside the 4x4 grid
-            if (newRow >= 0 && newRow < 4 && newCol >= 0 && newCol < 4)
+            if (newRow >= 0 && newRow < BoardSize && newCol >= 0 && newCol < BoardSize)
             {
                 // It's a valid move, so perform the swap
                 _tiles[_emptyTileRow, _emptyTileCol] = _tiles[newRow, newCol];
@@ -83,7 +85,7 @@ public class GameBoard
         if (direction == Direction.Right) targetCol++;
 
         // Check if the target position is within bounds
-        if (targetRow < 0 || targetRow > 3 || targetCol < 0 || targetCol > 3)
+        if (targetRow < 0 || targetRow >= BoardSize || targetCol < 0 || targetCol >= BoardSize)
         {
             return false; // Invalid move (off the board)
         }
@@ -106,12 +108,12 @@ public class GameBoard
     {
         int expectedNumber = 1;
 
-        for (int row = 0; row < 4; row++)
+        for (int row = 0; row < BoardSize; row++)
         {
-            for (int col = 0; col < 4; col++)
+            for (int col = 0; col < BoardSize; col++)
             {
                 // If we're at the last tile, it must be 0
-                if (row == 3 && col == 3)
+                if (row == BoardSize - 1 && col == BoardSize - 1)
                 {
                     return _tiles[row, col] == 0;
                 }
@@ -127,5 +129,10 @@ public class GameBoard
         }
 
         return true;
+    }
+
+    public int GetTile(int row, int col)
+    {
+        return _tiles[row, col];
     }
 }
