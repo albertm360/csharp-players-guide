@@ -55,6 +55,7 @@ public class Level24FifteenPuzzle
     public void Run()
     {
         Console.Title = "Fifteen Puzzle Game";
+        Console.Clear();
         const string directionPrompt =
             "Enter direction to move the empty space (either arrows or WASD) or 'q' to exit.";
         Game game = new Game();
